@@ -613,7 +613,7 @@ function DeliveryVsSalonSimulatorPage() {
     const salonProfit = salonPrice * (margin / 100);
     const estimatedBaseCost = Math.max(salonPrice - salonProfit, 0);
     const deliveryFactor = (1 - promotions / 100) * (1 - commission / 100);
-    const deliveryPrice = deliveryFactor > 0 ? (estimatedBaseCost + salonProfit + packaging) / deliveryFactor : 0;
+    const deliveryPrice = deliveryFactor > 0 ? (estimatedBaseCost + packaging) / ((1 - margin / 100) * deliveryFactor) : 0;
     const promotionImpact = deliveryPrice * (promotions / 100);
     const priceAfterPromotion = deliveryPrice - promotionImpact;
     const commissionAmount = priceAfterPromotion * (commission / 100);
