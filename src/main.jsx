@@ -229,7 +229,7 @@ function getRoute(path) {
 
 
 function SeoSchema({ path }) {
-  const origin = typeof window === 'undefined' ? 'https://gastrocalc.vercel.app' : window.location.origin;
+  const origin = typeof window === 'undefined' ? 'https://www.gastrocalc.com.ar' : window.location.origin;
   const activeFaqItems =
     path === '/simulador-delivery-vs-salon'
       ? salonFaqItems
