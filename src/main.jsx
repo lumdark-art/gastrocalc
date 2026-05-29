@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { ArrowRight, BadgePercent, Calculator, Clipboard, Package, RefreshCw, Share2, Sparkles, TrendingUp, Utensils } from 'lucide-react';
 import './styles.css';
 
@@ -40,37 +41,37 @@ const defaultComboProducts = [
 
 const pageMeta = {
   '/': {
-    title: 'Herramientas gratuitas para gastronomía | GastroCalc',
+    title: 'Herramientas gratuitas para gastronomía Argentina | GastroCalc',
     description:
-      'Calculadoras gastronómicas gratuitas para estimar delivery, food cost, precios, márgenes y rentabilidad en Argentina.',
+      'Calculadoras gratuitas de food cost, comisión delivery y combos para restaurantes, cafeterías y dark kitchens de Argentina.',
     keywords:
       'calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, calculadora combos gastronómicos, rentabilidad gastronomía',
   },
   '/calculadora-precio-delivery': {
-    title: 'Calculadora de comisión delivery para gastronomía | GastroCalc',
+    title: 'Calculadora de Comisión Rappi y PedidosYa Argentina | GastroCalc',
     description:
-      'Calculá precios de venta para delivery considerando comisión, packaging, merma y margen gastronómico para restaurantes y cafeterías.',
+      'Calculá cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
     keywords:
       'calculadora delivery, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
   },
   '/calculadora-comision-delivery': {
-    title: 'Calculadora de comisión delivery para gastronomía | GastroCalc',
+    title: 'Calculadora de Comisión Rappi y PedidosYa Argentina | GastroCalc',
     description:
-      'Calculá precios de venta para delivery considerando comisión, packaging, merma y margen gastronómico para restaurantes y cafeterías.',
+      'Calculá cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
     keywords:
       'calculadora delivery, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
   },
   '/simulador-delivery-vs-salon': {
-    title: 'Simulador Delivery vs Salón para gastronomía | GastroCalc',
+    title: 'Simulador Delivery vs Salón Argentina | GastroCalc',
     description:
-      'Compará precio salón vs delivery y calculá cuánto aumentar para conservar margen después de comisión de app, packaging y promociones.',
+      'Compará tu precio de salón con el precio necesario en apps de delivery para mantener el mismo margen de ganancia.',
     keywords:
       'simulador delivery vs salón, precio delivery restaurante, margen delivery, comisión app delivery, rentabilidad gastronomía',
   },
   '/calculadora-combos-gastronomicos': {
-    title: 'Calculadora de combos gastronómicos | GastroCalc',
+    title: 'Calculadora de Combos Gastronómicos Argentina | GastroCalc',
     description:
-      'Calculá si un combo, promo o menú gastronómico sigue siendo rentable considerando costos, packaging, descuentos y margen deseado.',
+      'Calculá si tu combo o promoción sigue siendo rentable después de sumar costos, packaging y descuentos.',
     keywords:
       'calculadora combos gastronómicos, calcular precio combo, rentabilidad combo restaurante, promo gastronómica rentable, precio menú ejecutivo, margen combo hamburguesería, calcular promociones gastronomía',
   },
@@ -175,11 +176,22 @@ function formatPercent(value) {
 function App() {
   const path = window.location.pathname;
   const route = getRoute(path);
-
-  usePageMeta(path);
+  const meta = pageMeta[path] || pageMeta['/'];
+  const origin = window.location.origin;
 
   return (
     <div className="min-h-screen bg-graphite text-stone-50">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords || pageMeta['/'].keywords} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:url" content={`${origin}${path}`} />
+        <link rel="canonical" href={`${origin}${path}`} />
+      </Helmet>
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,rgba(209,132,59,0.18),transparent_36%),radial-gradient(circle_at_90%_12%,rgba(201,164,106,0.14),transparent_30%),linear-gradient(180deg,#11100e_0%,#19130f_58%,#0f0d0b_100%)]" />
       <SeoSchema path={path} />
       <Header />
@@ -215,31 +227,6 @@ function getRoute(path) {
   return 'home';
 }
 
-function usePageMeta(path) {
-  useEffect(() => {
-    const meta = pageMeta[path] || pageMeta['/'];
-    document.title = meta.title;
-    updateMeta('description', meta.description);
-    updateMeta('keywords', meta.keywords || pageMeta['/'].keywords);
-    updateMeta('twitter:title', meta.title);
-    updateMeta('twitter:description', meta.description);
-    updateMetaProperty('og:title', meta.title);
-    updateMetaProperty('og:description', meta.description);
-    updateMetaProperty('og:url', `${window.location.origin}${path}`);
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.setAttribute('href', `${window.location.origin}${path}`);
-  }, [path]);
-}
-
-function updateMeta(name, content) {
-  const element = document.querySelector(`meta[name="${name}"]`);
-  if (element) element.setAttribute('content', content);
-}
-
-function updateMetaProperty(property, content) {
-  const element = document.querySelector(`meta[property="${property}"]`);
-  if (element) element.setAttribute('content', content);
-}
 
 function SeoSchema({ path }) {
   const origin = typeof window === 'undefined' ? 'https://gastrocalc.vercel.app' : window.location.origin;
@@ -2044,4 +2031,8 @@ function Footer() {
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);
