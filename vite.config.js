@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://www.gastrocalc.com.ar',
+      outDir: 'public',
       dynamicRoutes: [
         '/',
         '/calculadora-precio-delivery',
