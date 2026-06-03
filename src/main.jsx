@@ -572,6 +572,7 @@ function PriceDeliveryCalculatorPage() {
         </div>
       </section>
 
+      <PriceDeliverySeoPrimary />
       <UpcomingTools />
       <SeoContent />
       <FaqSection />
@@ -766,6 +767,7 @@ function DeliveryVsSalonSimulatorPage() {
         </div>
       </section>
 
+      <DeliveryVsSalonSeoPrimary />
       <ToolInterlinking />
       <SalonSeoContent />
       <SalonFaqSection />
@@ -1025,10 +1027,137 @@ function ComboCalculatorPage() {
         </div>
       </section>
 
+      <ComboSeoPrimary />
       <ComboToolInterlinking />
       <ComboSeoContent />
       <ComboFaqSection />
     </>
+  );
+}
+
+function PriceDeliverySeoPrimary() {
+  const path = window.location.pathname;
+  const isComision = path === '/calculadora-comision-delivery';
+
+  return (
+    <section className="mx-auto max-w-4xl px-4 pb-2 pt-8 sm:px-6 sm:pt-12" aria-labelledby="seo-primary-price-delivery">
+      <h2 id="seo-primary-price-delivery" className="text-2xl font-semibold tracking-tight text-crema sm:text-3xl">
+        {isComision
+          ? '¿Cómo calcular la comisión de Rappi y PedidosYa en Argentina?'
+          : '¿Cómo fijar el precio de tus platos en apps de delivery?'}
+      </h2>
+      <div className="mt-5 space-y-4 text-sm leading-7 text-stone-300 sm:text-base">
+        {isComision ? (
+          <>
+            <p>
+              La comisión de delivery es el porcentaje que te cobra la plataforma por cada pedido que recibís. Rappi,
+              PedidosYa y otras apps trabajan con porcentajes que pueden variar según el contrato, la zona, el tipo
+              de logística elegida y las condiciones comerciales vigentes. Entender cuánto te descuenta la app antes
+              de que te acrediten el pago es el primer paso para saber si tu precio está bien planteado.
+            </p>
+            <p>
+              El problema de no calcular la comisión delivery antes de publicar precios es que el margen de ganancia
+              puede quedar mucho más chico de lo que parece. Si usás el mismo precio que en salón, la plataforma se
+              queda con un porcentaje de ese importe y vos recibís menos neto. En muchos casos, ese recorte baja la
+              ganancia por debajo del mínimo para cubrir costos de insumos, packaging y operación del local.
+            </p>
+            <p>
+              Con esta calculadora de comisión delivery podés simular distintos escenarios: cargás el costo del
+              producto, el packaging, la merma estimada y el porcentaje de comisión que te aplica la app, y ves qué
+              precio de venta necesitás para conservar el margen que querés. Es una herramienta especialmente útil
+              si estás arrancando o si tenés dudas sobre si la plataforma está siendo rentable para tu restaurante,
+              hamburguesería o dark kitchen.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Fijar el precio de un plato para apps de delivery es diferente a ponerle precio en salón. En delivery
+              aparecen costos que muchas veces no se consideran: el packaging (envase, bolsa, sello y descartables),
+              la comisión de la plataforma y, en muchos casos, descuentos o promociones que la app puede activar
+              sobre tu menú. Si no incorporás estos factores al cálculo, el precio que publicás puede no ser
+              suficiente para cubrir tus costos reales.
+            </p>
+            <p>
+              La diferencia entre precio de salón y precio de delivery no es opcional, es necesaria. Un plato que
+              deja un 30% de margen en salón puede dejar un 10% o incluso un número negativo en delivery si no
+              ajustaste el precio. La comisión y el packaging juntos pueden representar entre un 25% y un 40% del
+              valor del pedido, dependiendo de cómo tengas configurado tu contrato con la plataforma.
+            </p>
+            <p>
+              Con la calculadora de precio delivery podés calcular tu precio sugerido partiendo del costo del
+              producto, sumando packaging y merma, y ajustando por comisión y margen objetivo. El resultado es una
+              estimación de cuánto debería pagar el cliente para que tu negocio sea rentable en el canal app, sin
+              necesidad de conocer todos los detalles técnicos del food cost gastronómico.
+            </p>
+          </>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function DeliveryVsSalonSeoPrimary() {
+  return (
+    <section className="mx-auto max-w-4xl px-4 pb-2 pt-8 sm:px-6 sm:pt-12" aria-labelledby="seo-primary-salon">
+      <h2 id="seo-primary-salon" className="text-2xl font-semibold tracking-tight text-crema sm:text-3xl">
+        ¿Tu delivery es realmente rentable?
+      </h2>
+      <div className="mt-5 space-y-4 text-sm leading-7 text-stone-300 sm:text-base">
+        <p>
+          Muchos restaurantes y dark kitchens en Argentina venden por delivery sin saber exactamente si están
+          ganando o perdiendo plata en ese canal. El motivo es simple: el precio de salón muchas veces se copia
+          al menú de la app sin revisar qué impacto tienen la comisión de la plataforma, el packaging y los
+          descuentos activos. El resultado es que el margen delivery puede ser mucho más bajo que el margen salón,
+          incluso cuando las ventas en la app aumentan.
+        </p>
+        <p>
+          Para comparar correctamente la rentabilidad entre canales hay que partir del precio de salón, estimar el
+          costo del packaging y el porcentaje de comisión, y calcular qué precio necesitaría el producto en la app
+          para mantener el mismo margen. En muchos casos, la diferencia necesaria está entre un 20% y un 40% por
+          encima del precio de salón, lo cual no siempre coincide con lo que el local tiene publicado en Rappi o
+          PedidosYa.
+        </p>
+        <p>
+          El simulador delivery vs salón te permite hacer esa comparación rápido: ingresás el precio de salón,
+          el packaging estimado, la comisión de la app y las promociones activas, y te muestra cuánto debería
+          costar el mismo producto en delivery para que el margen no caiga. Es especialmente útil antes de activar
+          una nueva plataforma, actualizar precios o revisar si tu canal delivery está siendo viable como negocio.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function ComboSeoPrimary() {
+  return (
+    <section className="mx-auto max-w-4xl px-4 pb-2 pt-8 sm:px-6 sm:pt-12" aria-labelledby="seo-primary-combos">
+      <h2 id="seo-primary-combos" className="text-2xl font-semibold tracking-tight text-crema sm:text-3xl">
+        ¿Cómo calcular si un combo o promoción es rentable?
+      </h2>
+      <div className="mt-5 space-y-4 text-sm leading-7 text-stone-300 sm:text-base">
+        <p>
+          Los combos gastronómicos son una estrategia común para subir el ticket promedio y rotar productos, pero
+          tienen un riesgo invisible: cuando se aplica un descuento sobre el precio del combo sin calcular bien los
+          costos, el margen real puede bajar mucho más de lo esperado. El precio de lista de un combo no es lo
+          mismo que el ingreso neto después del descuento, el packaging y el costo de cada producto incluido.
+        </p>
+        <p>
+          Para saber si un combo es rentable hay que sumar el costo de cada producto, el packaging total y
+          cualquier descartable incluido, y comparar ese total con el ingreso real después de aplicar el descuento.
+          Si esa diferencia no cubre el margen mínimo que necesita el local para operar, el combo está perdiendo
+          rentabilidad aunque se venda bien en volumen. Muchas hamburgueserías, cafeterías y restaurantes cuentan
+          unidades vendidas sin darse cuenta de que cada combo les genera pérdida neta.
+        </p>
+        <p>
+          La calculadora de combos gastronómicos te permite simular esa comparación: cargás los productos del
+          combo, el packaging, el precio actual y el descuento aplicado, y el sistema calcula si el precio es
+          suficiente o si necesitás ajustarlo. También podés calcular el precio mínimo sugerido desde cero,
+          fijando el margen que querés conservar, para que el combo funcione como herramienta de ventas sin
+          sacrificar la rentabilidad del local.
+        </p>
+      </div>
+    </section>
   );
 }
 
