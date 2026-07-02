@@ -41,39 +41,39 @@ const defaultComboProducts = [
 
 const pageMeta = {
   '/': {
-    title: 'Herramientas gratuitas para gastronomía Argentina | GastroCalc',
+    title: 'Calculadoras Gratis para Gastronomía Argentina | GastroCalc',
     description:
-      'Calculadoras gratuitas de food cost, comisión delivery y combos para restaurantes, cafeterías y dark kitchens de Argentina.',
+      'Calculadoras gratis de food cost, comisión delivery y combos para restaurantes, cafeterías y dark kitchens de Argentina.',
     keywords:
       'calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, calculadora combos gastronómicos, rentabilidad gastronomía',
   },
   '/calculadora-precio-delivery': {
-    title: 'Calculadora de Comisión Rappi y PedidosYa Argentina | GastroCalc',
+    title: 'Calculadora Gratis de Comisión Rappi y PedidosYa Argentina | GastroCalc',
     description:
-      'Calculá cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
+      'Calculá gratis cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
     keywords:
-      'calculadora delivery, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
+      'calculadora delivery gratis, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
   },
   '/calculadora-comision-delivery': {
-    title: 'Calculadora de Comisión Rappi y PedidosYa Argentina | GastroCalc',
+    title: 'Calculadora Gratis de Comisión Rappi y PedidosYa Argentina | GastroCalc',
     description:
-      'Calculá cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
+      'Calculá gratis cuánto te cobra Rappi o PedidosYa por cada pedido y cuál debería ser tu precio en la app para no perder margen.',
     keywords:
-      'calculadora delivery, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
+      'calculadora delivery gratis, calculadora gastronómica, food cost, margen gastronómico, calcular precio delivery, comisión PedidosYa, calcular precio restaurante, rentabilidad gastronomía, calculadora food cost argentina',
   },
   '/simulador-delivery-vs-salon': {
-    title: 'Simulador Delivery vs Salón Argentina | GastroCalc',
+    title: 'Simulador Gratis Delivery vs Salón Argentina | GastroCalc',
     description:
-      'Compará tu precio de salón con el precio necesario en apps de delivery para mantener el mismo margen de ganancia.',
+      'Compará gratis tu precio de salón con el precio necesario en apps de delivery para mantener el mismo margen de ganancia.',
     keywords:
-      'simulador delivery vs salón, precio delivery restaurante, margen delivery, comisión app delivery, rentabilidad gastronomía',
+      'simulador delivery vs salón gratis, precio delivery restaurante, margen delivery, comisión app delivery, rentabilidad gastronomía',
   },
   '/calculadora-combos-gastronomicos': {
-    title: 'Calculadora de Combos Gastronómicos Argentina | GastroCalc',
+    title: 'Calculadora Gratis de Combos Gastronómicos Argentina | GastroCalc',
     description:
-      'Calculá si tu combo o promoción sigue siendo rentable después de sumar costos, packaging y descuentos.',
+      'Calculá gratis si tu combo o promoción sigue siendo rentable después de sumar costos, packaging y descuentos.',
     keywords:
-      'calculadora combos gastronómicos, calcular precio combo, rentabilidad combo restaurante, promo gastronómica rentable, precio menú ejecutivo, margen combo hamburguesería, calcular promociones gastronomía',
+      'calculadora combos gastronómicos gratis, calcular precio combo, rentabilidad combo restaurante, promo gastronómica rentable, precio menú ejecutivo, margen combo hamburguesería, calcular promociones gastronomía',
   },
 };
 
@@ -243,7 +243,7 @@ function SeoSchema({ path }) {
     url: origin,
     inLanguage: 'es-AR',
     description:
-      'Herramientas gratuitas para gastronomía en Argentina: calculadoras de delivery, food cost, precios, márgenes y rentabilidad.',
+      'Herramientas gratis para gastronomía en Argentina: calculadoras de delivery, food cost, precios, márgenes y rentabilidad.',
   };
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -315,10 +315,10 @@ function HomePage() {
           GastroCalc
         </p>
         <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-crema sm:text-5xl lg:text-6xl">
-          Herramientas gratuitas para gastronomía
+          Herramientas gratis para gastronomía
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-7 text-stone-300 sm:text-lg">
-          Calculadoras simples para estimar costos, márgenes, comisiones y precios de venta en cafeterías,
+          Calculadoras gratis y simples para estimar costos, márgenes, comisiones y precios de venta en cafeterías,
           restaurantes, hamburgueserías y dark kitchens de Argentina.
         </p>
       </div>
@@ -328,9 +328,9 @@ function HomePage() {
         <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-caramel text-graphite shadow-[0_16px_50px_rgba(209,132,59,0.25)]">
           <Calculator size={24} />
         </div>
-        <h2 className="text-2xl font-semibold text-crema">Calculadora de comisión delivery</h2>
+        <h2 className="text-2xl font-semibold text-crema">Calculadora gratis de comisión delivery</h2>
         <p className="mt-3 text-sm leading-6 text-stone-300">
-          Simulá cuánto deberías cobrar para sostener margen cuando vendés por apps de delivery.
+          Simulá gratis cuánto deberías cobrar para sostener margen cuando vendés por apps de delivery.
         </p>
         <a
           href="/calculadora-precio-delivery"
@@ -344,9 +344,9 @@ function HomePage() {
         <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-latte text-graphite shadow-[0_16px_50px_rgba(201,164,106,0.22)]">
           <TrendingUp size={24} />
         </div>
-        <h2 className="text-2xl font-semibold text-crema">Simulador Delivery vs Salón</h2>
+        <h2 className="text-2xl font-semibold text-crema">Simulador gratis Delivery vs Salón</h2>
         <p className="mt-3 text-sm leading-6 text-stone-300">
-          Compará tu precio de salón con el precio delivery necesario para sostener margen.
+          Compará gratis tu precio de salón con el precio delivery necesario para sostener margen.
         </p>
         <a
           href="/simulador-delivery-vs-salon"
@@ -360,9 +360,9 @@ function HomePage() {
         <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-crema text-graphite shadow-[0_16px_50px_rgba(241,223,195,0.16)]">
           <BadgePercent size={24} />
         </div>
-        <h2 className="text-2xl font-semibold text-crema">Calculadora de Combos Gastronómicos</h2>
+        <h2 className="text-2xl font-semibold text-crema">Calculadora Gratis de Combos Gastronómicos</h2>
         <p className="mt-3 text-sm leading-6 text-stone-300">
-          Calculá si una promo, combo o menú especial mantiene margen real después de costos, packaging y descuentos.
+          Calculá gratis si una promo, combo o menú especial mantiene margen real después de costos, packaging y descuentos.
         </p>
         <a
           href="/calculadora-combos-gastronomicos"
@@ -475,13 +475,13 @@ function PriceDeliveryCalculatorPage() {
           <div className="relative max-w-4xl">
             <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-caramel/30 bg-caramel/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-latte">
               <Calculator size={14} />
-              Calculadora de costos gastronómicos
+              Calculadora gratis de costos gastronómicos
             </p>
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] tracking-tight text-crema sm:text-5xl lg:text-6xl">
-              Calculá cuánto cobrar
+              Calculá gratis cuánto cobrar
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300 sm:text-lg">
-              Definí un precio rentable considerando costos, packaging, merma y comisión delivery.
+              Definí gratis un precio rentable considerando costos, packaging, merma y comisión delivery.
             </p>
             <div className="mt-5 grid max-w-2xl gap-2 text-xs font-semibold text-stone-300 sm:grid-cols-3 sm:text-sm">
               <span className="rounded-2xl border border-white/10 bg-black/20 px-3 py-2 text-center">Costo real</span>
@@ -1168,13 +1168,13 @@ function DiagnosticHero() {
       <div className="relative max-w-4xl">
         <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-latte/30 bg-latte/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-latte">
           <TrendingUp size={14} />
-          Diagnóstico de rentabilidad
+          Diagnóstico gratis de rentabilidad
         </p>
         <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] tracking-tight text-crema sm:text-5xl lg:text-6xl">
           ¿Tu delivery realmente deja ganancia?
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300 sm:text-lg">
-          Compará el precio de salón contra el precio necesario en apps para no perder margen.
+          Compará gratis el precio de salón contra el precio necesario en apps para no perder margen.
         </p>
         <div className="mt-5 grid max-w-xl grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-2xl border border-white/10 bg-black/20 p-2 text-xs font-semibold text-stone-300 sm:text-sm">
           <span className="rounded-xl bg-white/[0.055] px-3 py-2 text-center">Salón</span>
@@ -1194,13 +1194,13 @@ function ComboHero() {
       <div className="relative max-w-4xl">
         <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-latte/30 bg-latte/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-latte">
           <BadgePercent size={14} />
-          Herramienta gratuita para combos y promociones
+          Herramienta gratis para combos y promociones
         </p>
         <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] tracking-tight text-crema sm:text-5xl lg:text-6xl">
           ¿Tu combo sigue siendo rentable?
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300 sm:text-lg">
-          Calculá si una promo, combo o menú especial mantiene margen real después de sumar costos, packaging y descuentos.
+          Calculá gratis si una promo, combo o menú especial mantiene margen real después de sumar costos, packaging y descuentos.
         </p>
         <div className="mt-5 grid max-w-xl grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-2xl border border-white/10 bg-black/20 p-2 text-xs font-semibold text-stone-300 sm:text-sm">
           <span className="rounded-xl bg-white/[0.055] px-3 py-2 text-center">Precio actual</span>
@@ -1780,7 +1780,7 @@ function UpcomingTools() {
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-crema">Otras herramientas gastronómicas</h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-stone-400">
-            Probá más calculadoras gratuitas para estimar precios, márgenes y rentabilidad.
+            Probá más calculadoras gratis para estimar precios, márgenes y rentabilidad.
           </p>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
@@ -1980,7 +1980,7 @@ function ToolInterlinking() {
           Otras herramientas gastronómicas
         </h2>
         <p className="mt-2 max-w-xl text-sm leading-6 text-stone-400">
-          Probá más calculadoras gratuitas para estimar precios, márgenes y rentabilidad.
+          Probá más calculadoras gratis para estimar precios, márgenes y rentabilidad.
         </p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           <a
